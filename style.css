@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+html {
+  background-color: #f7f5f2;
+  height: 100%;
+  width: 100%;
+}
+
+.p1,
+.p2,
+.p3 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+.p1 {
+  font-size: 4vw;
+  font-weight: 700;
+}
+
+.ellipse {
+  width: 15vw;
+  height: 6vw;
+  background-color: #e8d8e2;
+  border-radius: 80%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 1vw;
+  left: 1vw;
+  align-items: center;
+}
+
+.ellipse p {
+  color: #ffffff;
+  font-size: 1.5vw;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center-container {
+  position: relative;
+}
+
+.name-gif {
+  position: absolute;
+  top: 50%;
+  left: 1vw;
+  transform: translate(-14%, -1%);
+  width: 6vw;
+  height: auto;
+}
+
+.valentine-gif {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+  width: 40vw;
+  height: auto;
+}
+
+.p2 {
+  font-size: 4vw;
+  font-weight: 400;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  text-align: center; /* Center the buttons horizontally */
+}
+
+.yes-button,
+.no-button {
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10%; /* Make buttons elliptical */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 0 0.5vw; /* Adjust the margin as needed using vw units */
+}
+
+.yes-button {
+  background-color: #00e007;
+}
+
+.no-button {
+  background-color: #d10000;
+}
+
+.yes-button:hover {
+  background-color: #039e00;
+}
+
+.no-button:hover {
+  background-color: #990000;
+}
+
+.p3 {
+  font-size: 2.5vw;
+  font-weight: 700;
+}
