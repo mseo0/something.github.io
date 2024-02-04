@@ -6,6 +6,28 @@
   <meta name="viewport" content="width=device-width">
   <title>HI! :D</title>
   <link rel="stylesheet" type="text/css" href = "style.css"/>
+  <script>
+    // Automatically redirect to the password page on page load
+    if (!localStorage.getItem('redirected')) {
+      // If not redirected, do the redirection and set the flag
+      window.location.href = 'password.html';
+      localStorage.setItem('redirected', true);
+    }
+
+    // Fetch status from Flask app
+    setInterval(function() {
+      fetch('http://localhost:8080/')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('status').innerText = data;
+        })
+        .catch(error => {
+          console.error('Error fetching status:', error);
+        });
+    }, 5000); // Update every 5 seconds
+  </script>
+
+  
 </head>
 
 <body>
@@ -16,15 +38,17 @@
   <div class="center-container">
     <img src="cat-love.gif" alt="Animated GIF" class="name-gif">
   </div>
-  <script src="script.js"></script>
 
   <img src="lone-cat.gif" alt="Valentine GIF" class="valentine-gif">
   <h1 class ="p2">Will you be my Valentine?</h1>
 
   <div class="buttons-container">
-    <button class="yes-button"><p class ="p3">Yes</p></button>
-    <button class="no-button"><p class ="p3">No</p></button>
+    <button class="yes-button" onclick="handleYesClick()">Yes</button>
+    <button class="no-button" onclick="handleNoClick()">No</button>
   </div>
+
+  <script src="script.js"></script>
+  
 </body>
 
 </html>
